@@ -290,16 +290,7 @@ final class ContainerTest extends TestCase
         $container = new Container();
         $container->addResolver(new ConstructorResolver($container));
 
-        // https://3v4l.org/1AXpr
-        if (version_compare(PHP_VERSION, '8.0.0') >= 0) {
-            // PHP 8+
-            $this->assertInstanceOf(Exception::class, $container->get(Exception::class));
-        } else {
-            // PHP 7.x
-            // Cannot determine default value for internal functions
-            $this->expectException(InvalidDefinitionException::class);
-            $container->get(Exception::class);
-        }
+        $this->assertInstanceOf(Exception::class, $container->get(Exception::class));
     }
 
     /**
@@ -312,15 +303,7 @@ final class ContainerTest extends TestCase
         $container = new Container();
         $container->addResolver(new ConstructorResolver($container));
 
-        if (version_compare(PHP_VERSION, '8.0.0') >= 0) {
-            // PHP 8+
-            $this->assertInstanceOf(NotFoundException::class, $container->get(NotFoundException::class));
-        } else {
-            // PHP 7.x
-            // Cannot determine default value for internal functions
-            $this->expectException(InvalidDefinitionException::class);
-            $container->get(NotFoundException::class);
-        }
+        $this->assertInstanceOf(NotFoundException::class, $container->get(NotFoundException::class));
     }
 
     /**
