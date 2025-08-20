@@ -19,7 +19,7 @@ class InvalidDefinitionException extends Exception implements ContainerException
      *
      * @return self
      */
-    public static function create(string $message, Throwable $previous = null): self
+    public static function create(string $message, ?Throwable $previous = null): self
     {
         return new self($message, 0, $previous);
     }
