@@ -3,17 +3,17 @@
 namespace Selective\Container\Test\Resolver\TestCase;
 
 use PHPUnit\Framework\TestCase;
+use ReflectionMethod;
 use Selective\Container\Container;
 use Selective\Container\Exceptions\InvalidDefinitionException;
 use Selective\Container\Resolver\ConstructorResolver;
-use ReflectionMethod;
 use stdClass;
 
 final class ConstructorResolverTest extends TestCase
 {
     /**
      * Test.
-     * 
+     *
      * @return void
      */
     public function testResolveOnInvalidDefinition(): void
@@ -29,7 +29,7 @@ final class ConstructorResolverTest extends TestCase
 
     /**
      * Resolve parameters returns empty array when method is null.
-     * 
+     *
      * @return void
      */
     public function testResolveParametersReturnsEmptyArrayWhenMethodIsNull(): void
