@@ -78,7 +78,7 @@ final class ConstructorResolver implements DefinitionResolverInterface
      *
      * @return array<mixed> The resolved parameters
      */
-    private function resolveParameters(string $id, ReflectionMethod $method = null): array
+    private function resolveParameters(string $id, ?ReflectionMethod $method = null): array
     {
         if ($method === null) {
             return [];

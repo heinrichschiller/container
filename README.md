@@ -3,8 +3,6 @@
 [![Latest Version on Packagist](https://img.shields.io/github/release/selective-php/container.svg)](https://packagist.org/packages/selective/container)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 [![Build Status](https://github.com/selective-php/container/workflows/build/badge.svg)](https://github.com/selective-php/container/actions)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/selective-php/container.svg)](https://scrutinizer-ci.com/g/selective-php/container/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/quality/g/selective-php/container.svg)](https://scrutinizer-ci.com/g/selective-php/container/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/selective/container.svg)](https://packagist.org/packages/selective/container/stats)
 
 ## Description
@@ -13,11 +11,11 @@ A PSR-11 container implementation with optional **autowiring**.
 
 ## Requirements
 
- * PHP 8.1+
+ * PHP 8.1 - 8.4
 
 ## Installation
 
-```
+```bash
 composer require selective/container
 ```
 
